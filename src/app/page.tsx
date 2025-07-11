@@ -11,15 +11,16 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
-import image1 from '@/images/photos/image-1.jpg'
+import logoInteractive from '@/images/logos/Interactive_Investor_logo.jpg'
+import logoKimchi from '@/images/logos/kimchi-logo.svg'
+import logoAccess from '@/images/logos/access-digital.png'
+import logoLatus from '@/images/logos/latus_health_logo.jpeg'
+import logoSTEM from '@/images/logos/STEM-logo.svg'
+import image1 from '@/images/work/yodha-app.png'
 import image2 from '@/images/photos/image-2.jpg'
-import image3 from '@/images/photos/image-3.jpg'
+import image5 from '@/images/work/ii.png'
 import image4 from '@/images/photos/image-4.jpg'
-import image5 from '@/images/photos/image-5.jpg'
+import image3 from '@/images/work/rmn-square.png'
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
@@ -159,7 +160,7 @@ function Role({ role }: { role: Role }) {
   return (
     <li className="flex gap-4">
       <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-        <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+        <Image src={role.logo} alt="" className="h-7 w-7 rounded-full" unoptimized />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
@@ -187,35 +188,49 @@ function Role({ role }: { role: Role }) {
 function Resume() {
   let resume: Array<Role> = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
-      logo: logoPlanetaria,
-      start: '2019',
+      company: 'Interactive Investor',
+      title: 'Contract React Developer',
+      logo: logoInteractive,
+      start: '2024',
+      end: '2025',
+    },
+    {
+      company: 'Kimchi Digital',
+      title: 'Contract Engineer (Director)',
+      logo: logoKimchi,
+      start: '2022',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear().toString(),
       },
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
+      company: 'Latus Health (Reward Me Now / Yodha)',
+      title: 'Tech Lead / Solutions Architect',
+      logo: image3,
+      start: '2021',
+      end: '2023',
+    },
+    {
+      company: 'Access Digital (now GAIN)',
+      title: 'Team Lead / Front End Developer',
+      logo: logoAccess,
+      start: '2019',
+      end: '2021',
+    },
+    {
+      company: 'Latus Health',
+      title: 'Tech Lead / Mobile App Developer',
+      logo: logoLatus,
+      start: '2018',
       end: '2019',
     },
     {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
-    },
-    {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      company: 'STEM Learning',
+      title: 'Online Services Liaison',
+      logo: logoSTEM,
+      start: '2010',
+      end: '2018',
     },
   ]
 
@@ -230,7 +245,7 @@ function Resume() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
+      <Button href="/alan-oakden-expanded-cv.pdf" variant="secondary" className="group mt-6 w-full">
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
@@ -273,32 +288,30 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Software designer, founder, and amateur astronaut.
+            Software and web designer, business owner, amateur film photographer.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            I’m Alan, a software designer and web developer from Yorkshire, England. I've delivered solutions across web and mobile for businesses ranging from multi-billion pound enterprises to small local startups. This site is just a space to share articles about things
+            i've learned, projects I've worked on, some hobbyist photography and generally act as a hub for things that interest me.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
-              href="https://twitter.com"
+              href="https://twitter.com/kimchi_digital"
               aria-label="Follow on Twitter"
               icon={TwitterIcon}
             />
             <SocialLink
-              href="https://instagram.com"
+              href="https://www.instagram.com/kimchi_digital"
               aria-label="Follow on Instagram"
               icon={InstagramIcon}
             />
             <SocialLink
-              href="https://github.com"
+              href="https://github.com/Oakyden"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
             <SocialLink
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/alan-oakden-b46832111/"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />

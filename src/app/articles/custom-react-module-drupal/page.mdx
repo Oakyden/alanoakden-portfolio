@@ -1,0 +1,45 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import designSystem from './planetaria-design-system.png'
+import macallanCart from '@/images/macallan-cart.png'
+
+export const article = {
+  author: 'Alan Oakden',
+  date: '2020-01-20',
+  title: 'Creating a custom React module for Drupal',
+  description:
+    'Back in my time at Access agency (now GAIN), we wrote a custom checkout out of a series of custom React modules. Heres how.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+Back in 2020 Macallan teamed up with the Thirstie retailer network to [ship whisky to the US](https://www.thespiritsbusiness.com/2020/06/macallan-launches-e-boutique-with-thirstie/).
+
+        <Image
+        src={macallanCart}
+        alt=""
+        sizes="(min-width: 500px) 32rem, 20rem"
+        className="bg-zinc-100 object-cover dark:bg-zinc-800"
+        />
+
+We were posed with a unique challenge at the time as the Macllan website was a site sub-themed off a main Drupal configuration for all of Edrington's brands.
+
+Access had been the digital partners for Edrington Distillers since 2018, whose platform provides global brand and product governance across their multiple drinks brands; Famous Grouse, The Macallan, Highland Park, The Glenrothes and more. With a global online shopping outfit across multiple brands and regions, their customers eCommerce experience spans product listings and specific product pages, to shopping cart management and then a fully-fledged on-site checkout. To support them across the full shopping journey, Edrington uses React alongside a commerce provider (Thirstie) for their brands The Macallan and Famous Grouse.
+
+
+React was selected as the solution due to the circumstances surrounding the project. We had a very API-driven brief and access to the developers building the API so this seemed like a very strong use-case for JS front-end applications, and React was at the top of our list. 
+
+Working with commerce providers such as Shopify or BigCommerce in React involves leveraging any API provided, which can be done in many different ways. It allows the freedom to retrieve all the relevant data and apply it to the front-end however it is desired. React can be used with a Commerce provider across product listings, shopping cart management and checkout sections to provide the best user experience for any given shop/brand. 
+
+Reusable components are the bread & butter of React, and can be leveraged for commerce functionality in many ways. The most impactful components we found were related to forms for the on-site checkout, where address forms appear multiple times (shipping, billing, saved addresses). React also allows for both in-page enhancements as well as a fully fledged SPA (Single Page App) experience - for example, the mini-cart present on all site pages as a standalone widget, but the checkout pages are treated as an SPA. This flexibility within a single framework helps keep consistency of the commerce experience and interfaces, as well as the code behind it.
+
+When it comes to Drupal, currently our React implementations sit on top of the Drupal front-end layer and we use custom Drupal configuration forms to control settings around the React code, such as feature toggles (i.e a checkbox to enable Google Pay).
+
+### How we did it
+
+There are good writeups on [how custom modules can be utilised to insert a single page app (SPA)](https://www.rapiddg.com/article/how-add-react-widget-drupal-8-site) somewhere within an existing Drupal site. For this checkout, it was decided to have a navbar widget to show cart items, and a separate whole-page SPA to show on a dedicated page once the user clicked to checkout. The microapps exchanged basic initialising data through `localStorage`. Certain components that already existed in the Macallan storybook suite of components were able to be utilised within the React microapp to provide a consistent theme and approach to styling.

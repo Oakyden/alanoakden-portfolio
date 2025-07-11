@@ -10,7 +10,7 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
-import portraitImage from '@/images/portrait.jpg'
+import portraitImage from '@/images/portrait.jpeg'
 
 function SocialLink({
   className,
@@ -50,7 +50,7 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'I’m Spencer Sharp. I live in New York City, where I design the future.',
+    'I’m Alan Oakden. I live in York, England, I love all things software and coding, and the opportunities they bring.',
 }
 
 export default function About() {
@@ -69,58 +69,61 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            I’m Spencer Sharp. I live in New York City, where I design the
-            future.
+            {`I’m Alan Oakden. I live in York, England, I love all things creative, particularly coding and software.`}
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I’ve loved making things for as long as I can remember, and wrote
-              my first program when I was 6 years old, just two weeks after my
-              mom brought home the brand new Macintosh LC 550 that I taught
-              myself to type on.
+              {`I’ve always had an interest in technology from a young age. I'd been
+              a hobbyist web designer since my teens, but in late 2017 I decided to 
+              really push on with my career and study it with the aim of getting a
+              career in software development and web design. I temporarily reduced my working 
+              hours to four days a week and focused Friday through to Sunday on learning
+              additional web developer skills as well as mobile app development.`}
             </p>
             <p>
-              The only thing I loved more than computers as a kid was space.
-              When I was 8, I climbed the 40-foot oak tree at the back of our
-              yard while wearing my older sister’s motorcycle helmet, counted
-              down from three, and jumped — hoping the tree was tall enough that
-              with just a bit of momentum I’d be able to get to orbit.
+              {`Since
+              then, I've gone strength to strength. I landed a role as a sole mobile app 
+              developer at Latus Health in 2018, which was a baptism of fire but a successful one where 
+              I learned so much in a short space of time. We released a wellbeing app for Outokumpu steelmakers - a €7.7 billion revenue company.
+              I then became a team-lead at one of Manchester's leading agencies Access (now GAIN) in 2019 where we managed large clients such as Edrington (owners of Famous Grouse, Brugal Rum, Macallan Whisky etc), WaterAid and the Welsh Government
+              to name a few. From there, I was asked to rejoin Latus Health in 2021 in order to build my own team to work 
+              on a proprietary health solution. Since then I've focused on becoming a contractor and building my own business. 
+              Most recently I've been doing React and Drupal CMS work for Interactive Investor, revitalising their editor experience with draggable layout paragraphs, and creating a new suite of components in the nextJS frontend that consumes Drupal in a headless manner.`}
             </p>
             <p>
-              I spent the next few summers indoors working on a rocket design,
-              while I recovered from the multiple surgeries it took to fix my
-              badly broken legs. It took nine iterations, but when I was 15 I
-              sent my dad’s Blackberry into orbit and was able to transmit a
-              photo back down to our family computer from space.
+              {`Outside of coding I love anything that can keep me actively engaged. The 
+              occasional Netflix series and film is fine, but I much prefer gaming, 
+              going for hikes with my dog, playing bass or doing creative work with 
+              photography - especially film photography recently. Most recently the arrival of my daughter, Lilly, has been keeping me busy!`}
             </p>
             <p>
-              Today, I’m the founder of Planetaria, where we’re working on
-              civilian space suits and manned shuttle kits you can assemble at
-              home so that the next generation of kids really <em>can</em> make
-              it to orbit — from the comfort of their own backyards.
+              {`I'm currently seeking to be engaged in any project that utilises 'JAMstack'
+              - Javascript, APIs and Markup. My ideal project would include one or more of; React 
+              (Gatsby, Next, React Native, Expo etc too), Typescript, Node, GraphQL, Cypress, Docker,
+               Azure / AWS / Firebase and noSQL DBs. I also have experience with various CMS software, especially Drupal.`}
             </p>
           </div>
         </div>
         <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink href="#" icon={TwitterIcon}>
+            <SocialLink href="https://twitter.com/alanoakden" icon={TwitterIcon}>
               Follow on Twitter
             </SocialLink>
             <SocialLink href="#" icon={InstagramIcon} className="mt-4">
               Follow on Instagram
             </SocialLink>
-            <SocialLink href="#" icon={GitHubIcon} className="mt-4">
+            <SocialLink href="https://github.com/Oakyden" icon={GitHubIcon} className="mt-4">
               Follow on GitHub
             </SocialLink>
-            <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
+            <SocialLink href="https://www.linkedin.com/in/alan-oakden-b46832111/" icon={LinkedInIcon} className="mt-4">
               Follow on LinkedIn
             </SocialLink>
             <SocialLink
-              href="mailto:spencer@planetaria.tech"
+              href="mailto:admin@alanoakden.com"
               icon={MailIcon}
               className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
             >
-              spencer@planetaria.tech
+              admin@alanoakden.com
             </SocialLink>
           </ul>
         </div>

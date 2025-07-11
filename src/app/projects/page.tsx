@@ -3,48 +3,86 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import OKHealthyLife from '@/images/logos/OKHealthyLife.png'
+import welshGov from '@/images/logos/welshGov.png'
+import macallanWhisky from '@/images/logos/macallanWhisky.png'
+import RMNlogo from '@/images/logos/RMNlogo.webp'
+import yodhaWhite from '@/images/logos/yodha-white.png'
+import yodhaLogo from '@/images/logos/yodha-logo.png'
+import yodhaMobile from '@/images/logos/yodha-yellow.png'
+import yodhaTablet from '@/images/logos/yodha-tablet.png'
+import wateraid from '@/images/logos/wateraid.png'
+import interactiveInvestor from '@/images/logos/Interactive_Investor_logo.jpg'
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'Interactive Investor',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+      `Interactive Investor is a subscription based online investment service with £59 billion of assets under administration and over 400,000 customers. 
+      "ii" were seeking a dev with experience in both the React ecosystem as well as Drupal. Although a rather niche combination, I met the requirements. 
+      Originally a 3 month contract, it was extended several times over. I decided to leave the contract after a successful 16 months in order to help look after my first born child, Lilly, during the first weeks of her life.`,
+    link: { href: 'https://www.ii.co.uk/', label: 'ii website' },
+    logo: interactiveInvestor,
   },
   {
-    name: 'Animaginary',
+    name: 'WaterAid Website(s)',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+      'WaterAid had one codebase that built out to several independent albeit connected websites. By utilising Drupal, config split and Acquia hosting, one theme and central CMS configuration could be used, while offering bespoke CMS fields and features to each WaterAid country. Improvements to the home page and donation flow increased donations as a whole by 64%.',
+    link: { href: 'https://www.wateraid.org/uk/', label: 'WaterAid websites' },
+    logo: wateraid,
   },
   {
-    name: 'HelioStream',
+    name: 'Reward Me Now',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
+      'Reward your employees with exclusive discounts & benefits for over 130 top UK brands, all housed in a bespoke company app. Built with a Laravel Nova dashboard and a React Native mobile app. The Simfoni Retailer API is used for vouchers.',
+    link: { href: 'https://play.google.com/store/apps/details?id=com.redu.Ashleigh&hl=en&gl=US', label: 'RMN on Google Play' },
+    logo: RMNlogo,
   },
   {
-    name: 'cosmOS',
+    name: 'Health Kiosk App',
     description:
-      'The operating system that powers our Planetaria space shuttles.',
+      `A kiosk app made in React Native. The app is placed on Samsung A8 tablets that integrates with a flight case. The flight case also contains
+      various health hardware including a blood pressure device, spriometer and audiometry headphones. Various third party API and SDK integrations are used
+      to gather health data.`,
     link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
+    logo: yodhaTablet,
   },
   {
-    name: 'OpenShuttle',
+    name: 'Yodha Web App',
     description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+      'Hosted on Azure, utilising Azure CI/CD, devops, API management, Auth0, a .Net backend and React/Bootstrap front end.',
+    link: { href: 'https://app.yodha.io', label: 'yodha.io' },
+    logo: yodhaLogo,
   },
+  {
+    name: 'Yodha Mobile App',
+    description:
+      `An accompanying mobile app for Yodha. Utilised a Laravel dashboard for voucher / steps management. React Native was used for the app build.
+       Integrated with Google and Apple steps.`,
+    link: { href: 'https://www.latushealth.co.uk/yodha/', label: 'Yodha Info Page' },
+    logo: yodhaWhite,
+  },
+  {
+    name: 'Wellbeing App',
+    description:
+      `An app that could whitelabel for other companies. The most notable was OK 2 HealthyLife for the steel manufacturer Otokumpu.`,
+    link: { href: 'https://apkcombo.com/ok-2-healthylife/uk.co.latushealth.outokumpu/', label: 'Archived App Page' },
+    logo: OKHealthyLife,
+  },
+  {
+    name: 'Welsh Government Law Site',
+    description:
+      'The Welsh Government wanted a website to clarify Welsh Law to citizens of Wales. Built with Drupal 9, utilising a custom theme that followed the Government GEL style guidelines and designed to be bilingual.',
+    link: { href: 'https://law.gov.wales/', label: 'law.gov.wales' },
+    logo: welshGov,
+  },
+  {
+    name: 'Macallan Whisky Checkout',
+    description:
+      'During Covid, Macallan wished to provide whisky to US customers. Most EU users checked out via a shopify checkout, Macallan wanted to direct US users off to a US-only checkout that utilised Braintree payment gateway and the Thirstie retailer network for checkout. The solution utilised a middleware with graphQL and a custom Drupal module that utilised React to checkout.',
+    link: { href: 'https://www.themacallan.com/en', label: 'Macallan Web Checkout' },
+    logo: macallanWhisky,
+  }
 ]
 
 function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -66,8 +104,9 @@ export const metadata: Metadata = {
 export default function Projects() {
   return (
     <SimpleLayout
-      title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      title="Things I’ve made or collaborated on."
+      intro="I've worked on mobile apps, CMS sites (in particular Drupal) as well as proprietary 
+      web app solutions (React, NextJS, Gatsby). Below are just some of the things i've led on or had a big input."
     >
       <ul
         role="list"

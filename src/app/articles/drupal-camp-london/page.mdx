@@ -1,0 +1,65 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import drupalPhoto from '@/images/photos/image-1.jpg'
+import Image from 'next/image'
+
+export const article = {
+  author: 'Alan Oakden',
+  date: '2020-02-02',
+  title: 'Drupal Camp London 2020',
+  description:
+    'A Drupal conference heavily affected by Covid-19',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+This is an original writeup by [Phil Norton](https://hashbangcode.com) on the now retired weareaccess.co.uk website that covers the multi-day event well (that I attended alongside him) and I thought I'd share here.
+
+        <Image
+        src={drupalPhoto}
+        alt=""
+        sizes="(min-width: 500px) 32rem, 20rem"
+        className="bg-zinc-100 object-cover dark:bg-zinc-800"
+        />
+
+DrupalCamp London was held on the 14th and 15th March this year, and alongside some of the Access web development team, I went down to City University London to partake in the event. I wasn't talking this year, so I was there purely to enjoy the conference!
+
+### Saturday
+
+Saturday kicked off with a quick talk from Rachael Lawson, talking about the Drupal Association. Starting with an exercise where people stood up if they've used an aspect of the Drupal Association, it was interesting to see all of the different ways that they were involved in Drupal. This included Drupal conferences, the drupal.org and the jobs.drupal.org websites, and even the recent marketing initiative.
+
+Right after this we had Kevin Bridges talking about DevOps and Emotional Intelligence: Taking that next step. This was a look at the emotional side of DevOps and how the culture of an organisation is important to success. Some of the lessons Kevin talked about were having a culture of kindness, appreciating that DevOps is hard, and allowing people to fail is important for the team to collaborate and grow. A very interesting talk with lots of little take home points.
+
+Next up was Finn Lewis, talking about LocalGov Drupal - an open source collaboration between UK councils that looks to solve common problems. More than 60 councils around the UK use Drupal to host their sites and so a collaboration between these different agencies means that a great deal of time and effort is reduced. This collaboration has been achieved both with a simple legal framework and by the sharing of code.
+
+
+
+After lunch was Continuous Integration and Continuous Deployment designs with Hussain Abbas. We looked at some tools that Hussain uses to build and deploy Drupal sites such as Docker, Jenkins, and some PHP code analysis libraries. Hussain also had a really interesting speech to text system that shows subtitles on the screen, although this often produced some strange sentences, it was a great way of being as accessible as possible.
+
+Next up was a talk about MemSQL and Drupal with by Evgenii Nikltin. MemSQL is a database system that stores the data entirely in memory and it's MySQL API compatible too so you can use the standard PDO and mysqli libraries from PHP to interface with it. Evgenii's created a Drupal module that allows Drupal to use MemSQL and took us through some Drupal examples where MemSQL really helps.
+
+The final talk of the day was with Alex Moreno and Terry Anderson, talking about enterprise projects and how to manage them. Having worked with them on enterprise clients on Acquia in the past, it was good to get more of an oversight into what enterprise means and how these organisations tend to work. I'm also quite pleased they included a reference to Star Trek in their talk!
+
+After this we all went off to the Coin Laundry for some free drinks, provided by the camp.
+
+### Sunday
+
+Sunday began with a keynote from Nick Veenhof, who talked about moving beyond a simple CMS and into digital experience (DXP). It's all about providing analytics, personalisation, CRM systems, marketing and automation services. Dropsolid have built some tools around this, including using Drupal to power the user interface and personalisation, with Mautic and Apache Unomi to power the CRM and marketing automation side of things. Nick demonstrated a suite of tools that are quite far ahead of anything I've seen demonstrated yet, so well worth a look into if you're thinking of using personalisation.
+
+
+
+Speaking of personalisation, the next talk was all about how to personalise a Drupal site in much the same way as Netflix does. Akanksha Singh went through a few different techniques and modules that showed how to personalise things. Really interesting outcomes as well, and simple to achieve in Drupal using a few modules and some cookies. Akanksha did a lot of demos in the talk (which I always find brave) and the demo only misbehaved a couple of times.
+
+The final session of the weekend was with Brent Gees and Wouter De Bruycker talking about Drupal SEO pitfalls and how to avoid them. I've had some recent troubles with some of the latest advances in SEO and how Drupal works, so this talk was really helpful for me. Lots of little tips and tricks as well as why you should be doing them.
+
+After a final session with closing remarks and lots of thank you messages it was time to go home.
+
+### Overall
+
+Although a fantastic weekend, the impact that COVID-19 virus had on the conference was pretty noticeable. Whilst the conference normally expects around 400 attendees, this year the attendance was around 70, meaning that many of the sessions were cancelled or delivered remote. Organisers of the camp were rapidly trying to reorganise things to fill the slots on the day and they did an amazing job.
+
+The remote sessions were just as well delivered as those in person, and it showed how well the technology could work. The situation clearly caused a great deal of stress to the organisers, which was not helped by some of the vitriol they received online. The sense of community around the camp and the quality of the sessions that were delivered was excellent though and it was great to see the community come together in a crisis.

@@ -41,32 +41,32 @@ function Appearance({
 }
 
 export const metadata: Metadata = {
-  title: 'Speaking',
+  title: 'Conferences and podcasts',
   description:
-    'I’ve spoken at events all around the world and been interviewed for many podcasts.',
+    `Conferences, podcasts and resources I've found useful`,
 }
 
 export default function Speaking() {
   return (
     <SimpleLayout
-      title="I’ve spoken at events all around the world and been interviewed for many podcasts."
-      intro="One of my favorite ways to share my ideas is live on stage, where there’s so much more communication bandwidth than there is in writing, and I love podcast interviews because they give me the opportunity to answer questions instead of just present my opinions."
+      title="Conferences, podcasts and resources I've found useful."
+      intro="I love to listen to keep up to date with the latest in software, design and business. Here are some of my favourite resources."
     >
       <div className="space-y-20">
         <SpeakingSection title="Conferences">
           <Appearance
             href="#"
-            title="In space, no one can watch you stream — until now"
-            description="A technical deep-dive into HelioStream, the real-time streaming library I wrote for transmitting live video back to Earth."
-            event="SysConf 2021"
-            cta="Watch video"
+            title="Front End North 2025"
+            description="A welcoming one-track, one-day conference in Sheffield for developers and designers who work on the web."
+            event="Front End North, July 2025"
+            cta="Read Article"
           />
           <Appearance
             href="#"
-            title="Lessons learned from our first product recall"
-            description="They say that if you’re not embarassed by your first version, you’re doing it wrong. Well when you’re selling DIY space shuttle kits it turns out it’s a bit more complicated."
-            event="Business of Startups 2020"
-            cta="Watch video"
+            title="Drupal Camp London"
+            description="Just before the UK announced lockdowns and travel restrictions I attended Drupal Camp London 2019 with my colleagues at Access."
+            event="Drupal Camp London, December 2019"
+            cta="Read Article"
           />
         </SpeakingSection>
         <SpeakingSection title="Podcasts">

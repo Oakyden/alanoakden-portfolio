@@ -7,12 +7,13 @@ import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Spencer Sharp',
+    template: '%s - Alan Oakden',
     default:
-      'Spencer Sharp - Software designer, founder, and amateur astronaut',
+      'Alan Oakden - Web, App and Software Designer',
   },
   description:
-    'I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms.',
+    `I’m Alan, a software designer and business owner based in Yorkshire, England. This site is just a space to share articles about things
+    I've learned, projects I've worked on as well as a chance to share some photography while generally being a hub for things that interest me.`,
   alternates: {
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
