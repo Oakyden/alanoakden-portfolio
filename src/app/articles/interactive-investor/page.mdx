@@ -1,0 +1,97 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import iiMobileOne from '@/images/work/ii-mobile-one.png'
+import iiMobileTwo from '@/images/work/ii-mobile-two.png'
+import iiMobileThree from '@/images/work/ii-mobile-three.png'
+import iiMobileFour from '@/images/work/ii-mobile-four.png'
+
+
+export const article = {
+  author: 'Alan Oakden',
+  date: '2025-06-01',
+  title: 'My time at Interactive Investor',
+  description:
+    'Reviewing a wonderful time at Interactive Investor utilising Drupal, NextJS, Typescript and AWS',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+At the end of 2023 a recruiter reached out to me to ask about my availability for a Drupal and React contract.
+
+It was a pleasant surprise as the market had seemed quiet until that point and I'd rarely had my Drupal expertise as the main pull for clients.
+
+Nevertheless, what started as a 3 month contract soon became 16 months.
+
+## About Interactive Investor
+Interactive Investor Services Limited, trading as interactive investor, is a subscription-based online investment service in the United Kingdom, founded in 1995 by the entrepreneur Sherry Coutu. It provides financial information, as well as investment tools. 
+It is the UK's biggest flat-fee investment platform, with (as of 2022) £59 billion of assets under administration and over 400,000 customers. The company is based in Manchester, with offices in London and Leeds. Since 2022 it has been a subsidiary of UK-based investment company aberdeen.
+
+## Screenshots
+<div className="flex flex-col sm:flex-row">
+        <Image
+          src={iiMobileOne}
+          alt=""
+          sizes="(min-width: 500px) 15rem, 8rem"
+          className="bg-zinc-100 object-cover dark:bg-zinc-800 inline-block"
+        />
+
+        <Image
+          src={iiMobileTwo}
+          alt=""
+          sizes="(min-width: 500px) 15rem, 8rem"
+          className="bg-zinc-100 object-cover dark:bg-zinc-800"
+        />
+        </div>
+<div className="flex flex-col sm:flex-row">
+        <Image
+          src={iiMobileThree}
+          alt=""
+          sizes="(min-width: 500px) 15rem, 8rem"
+          className="bg-zinc-100 object-cover dark:bg-zinc-800"
+        />
+
+        <Image
+          src={iiMobileFour}
+          alt=""
+          sizes="(min-width: 500px) 15rem, 8rem"
+          className="bg-zinc-100 object-cover dark:bg-zinc-800"
+        />
+</div>
+
+
+## Tech Stack
+
+Without giving too much away, ii utilise a series of private npm repositories that separate logic and ui into maintainable chunks to be consumed across:
+
+- Private (Secure) web app
+- Public web app
+- A series of microapps such as those used for the header or for navigating /help path pages
+- Helper services used by both the mobile app and web
+
+There's various AWS configurations and services in use, often controlled through 'infrastructure as code', apps build through Github CI/CD actions before separately working their way through AWS pipelines.
+
+Separately, AWS lambda functions are used to generate sitemaps, menu items and other shared context items.
+
+Further to this, the public website content is built from a headless Drupal instance and parsed through normalizers onto a static gateway API that's later consumed by the NextJS front end.
+
+### Projects completed
+
+In my time I:
+
+- Set up a shortcodes feature consisting of:
+  - A custom Drupal module to enable CMS editors to enter key-value pairs into a dynamoDB table
+  - A nextJS API route to collate live pricing data as well as the CMS editor entered key-value pairs
+  - A helper function to parse the shortcodes and render them in the frontend based on a CMS user entering a shortcode similar to `[ii-shortcode key="some-key"]` in a WYSIWYG field with the value being fetched from dynamo DB.
+- Converted figma designs into a full suite of new React tsx components that would in turn be selected and built out on a per page basis, based on editor choices in the CMS.
+- Lightly altered existing 'old' content types and their front end rendering in order to blend their style with the new components.
+- Integrated Salesforce Marketing Cloud to enable CMS site editors to highlight components in the CMS and in turn dynamically replace them on the front end based on tracked user data.
+
+
+### Closing thoughts
+
+I thoroughly enjoyed my time at ii, working with a close team of developers that became a permanent fixture under the name of 'public website squad'. It engrained my love for React and Typescript, while also becoming more confident with SSR and other nextJS specialities.

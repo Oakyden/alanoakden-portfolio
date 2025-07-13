@@ -10,7 +10,7 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
-import portraitImage from '@/images/portrait.jpeg'
+import portraitImage from '@/images/photos/image-4.jpg'
 
 function SocialLink({
   className,
@@ -76,7 +76,7 @@ export default function About() {
               {`I’ve always had an interest in technology from a young age. I'd been
               a hobbyist web designer since my teens, but in late 2017 I decided to 
               really push on with my career and study it with the aim of getting a
-              career in software development and web design. I temporarily reduced my working 
+              career in software and web development. I temporarily reduced my working 
               hours to four days a week and focused Friday through to Sunday on learning
               additional web developer skills as well as mobile app development.`}
             </p>
@@ -87,7 +87,8 @@ export default function About() {
               I learned so much in a short space of time. We released a wellbeing app for Outokumpu steelmakers - a €7.7 billion revenue company.
               I then became a team-lead at one of Manchester's leading agencies Access (now GAIN) in 2019 where we managed large clients such as Edrington (owners of Famous Grouse, Brugal Rum, Macallan Whisky etc), WaterAid and the Welsh Government
               to name a few. From there, I was asked to rejoin Latus Health in 2021 in order to build my own team to work 
-              on a proprietary health solution. Since then I've focused on becoming a contractor and building my own business. 
+              on a proprietary health solution that entailed - a health dashboard for occ health appointments, data recording and compliance and a wellbeing app that would partially sync with the health dashboard for appointment scheduling while offering online GP, Physio and Counselling services.
+              We also handled an acquisition of an app called 'Reward Me Now' that'd incentivise healthier habits for employees in return for monetary rewards and vouchers off top brands. Since then I've focused on becoming a contractor and building my own business. 
               Most recently I've been doing React and Drupal CMS work for Interactive Investor, revitalising their editor experience with draggable layout paragraphs, and creating a new suite of components in the nextJS frontend that consumes Drupal in a headless manner.`}
             </p>
             <p>
@@ -108,9 +109,6 @@ export default function About() {
           <ul role="list">
             <SocialLink href="https://twitter.com/alanoakden" icon={TwitterIcon}>
               Follow on Twitter
-            </SocialLink>
-            <SocialLink href="#" icon={InstagramIcon} className="mt-4">
-              Follow on Instagram
             </SocialLink>
             <SocialLink href="https://github.com/Oakyden" icon={GitHubIcon} className="mt-4">
               Follow on GitHub

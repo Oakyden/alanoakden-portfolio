@@ -21,7 +21,7 @@ const projects = [
       `Interactive Investor is a subscription based online investment service with £59 billion of assets under administration and over 400,000 customers. 
       "ii" were seeking a dev with experience in both the React ecosystem as well as Drupal. Although a rather niche combination, I met the requirements. 
       Originally a 3 month contract, it was extended several times over. I decided to leave the contract after a successful 16 months in order to help look after my first born child, Lilly, during the first weeks of her life.`,
-    link: { href: 'https://www.ii.co.uk/', label: 'ii website' },
+    link: { href: '/articles/interactive-investor', label: 'ii article' },
     logo: interactiveInvestor,
   },
   {
@@ -44,7 +44,7 @@ const projects = [
       `A kiosk app made in React Native. The app is placed on Samsung A8 tablets that integrates with a flight case. The flight case also contains
       various health hardware including a blood pressure device, spriometer and audiometry headphones. Various third party API and SDK integrations are used
       to gather health data.`,
-    link: { href: '#', label: 'github.com' },
+    link: { href: 'https://yodha.io', label: 'Yodha landing page' },
     logo: yodhaTablet,
   },
   {
