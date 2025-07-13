@@ -259,7 +259,7 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            web and mobile developer, business owner, amateur film photographer.
+            Web and mobile developer, business owner, amateur film photographer.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             {`I’m Alan, a web and mobile developer from Yorkshire, England. I've delivered solutions across web and mobile for businesses ranging from multi-billion pound enterprises to small local startups. This site is just a space to share articles about things
