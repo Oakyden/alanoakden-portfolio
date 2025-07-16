@@ -51,7 +51,7 @@ const projects = [
     name: 'Yodha Web App',
     description:
       'Hosted on Azure, utilising Azure CI/CD, devops, API management, Auth0, a .Net backend and React/Bootstrap front end.',
-    link: { href: 'https://app.yodha.io', label: 'yodha.io' },
+    link: { href: 'https://yodha.io', label: 'yodha.io' },
     logo: yodhaLogo,
   },
   {
