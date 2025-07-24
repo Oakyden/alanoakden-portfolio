@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       'Alan Oakden - Web, App and Software Designer',
   },
   description:
-    `I’m Alan, a software designer and business owner based in Yorkshire, England. This site is just a space to share articles about things
+    `I’m Alan, a software engineer based in Yorkshire, England. This site is just a space to share articles about things
     I've learned, projects I've worked on as well as a chance to share some photography while generally being a hub for things that interest me.`,
   alternates: {
     types: {
