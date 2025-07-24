@@ -284,7 +284,7 @@ export default async function Home() {
               <div className="mx-auto max-w-2xl gap-x-14 lg:flex lg:max-w-5xl lg:items-center lg:px-8 xl:px-0">
                 <div className="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
                   <h1 className="text-pretty text-5xl font-semibold tracking-tight text-gray-900 dark:text-gray-100 sm:text-7xl">
-                    I'm Alan, a software engineer from Yorkshire.
+                    I&apos;m Alan, a software engineer from Yorkshire.
                   </h1>
                   <p className="text-pretty mt-8 text-lg font-medium text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
                     This is my site where I share my work, articles, thoughts on
