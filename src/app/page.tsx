@@ -131,7 +131,12 @@ function Role({ role }: { role: Role }) {
   return (
     <li className="flex gap-4">
       <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-        <Image src={role.logo} alt="company-logo" className="h-7 w-7 rounded-full" unoptimized />
+        <Image
+          src={role.logo}
+          alt="company-logo"
+          className="h-7 w-7 rounded-full"
+          unoptimized
+        />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
@@ -216,7 +221,11 @@ function Resume() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="/alan-oakden-expanded-cv.pdf" variant="secondary" className="group mt-6 w-full">
+      <Button
+        href="/alan-oakden-expanded-cv.pdf"
+        variant="secondary"
+        className="group mt-6 w-full"
+      >
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
@@ -256,40 +265,126 @@ export default async function Home() {
 
   return (
     <>
-      <Container className="mt-9">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Web and mobile developer, amateur film photographer.
-          </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            {`I’m Alan, a web and mobile developer from Yorkshire, England. I've delivered solutions across web and mobile for businesses ranging from multi-billion pound enterprises to small local startups. This site is just a space to share articles about things
-            I've learned, projects I've worked on, some hobbyist photography and generally act as a hub for things that interest me.`}
-          </p>
-          <div className="mt-6 flex gap-6">
-            <SocialLink
-              href="https://twitter.com/kimchi_digital"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            />
-            <SocialLink
-              href="https://www.instagram.com/kimchi_digital"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-            <SocialLink
-              href="https://github.com/Oakyden"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-            />
-            <SocialLink
-              href="https://www.linkedin.com/in/alan-oakden-b46832111/"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
+      <main>
+        <div className="relative isolate">
+          <div
+            aria-hidden="true"
+            className="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
+          >
+            <div
+              style={{
+                clipPath:
+                  'polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)',
+              }}
+              className="aspect-801/1036 w-200.25 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
             />
           </div>
+          <div className="overflow-hidden">
+            <div className="mx-auto max-w-7xl px-6 pb-8 pt-8 sm:pt-60 lg:px-8 lg:pt-8">
+              <div className="mx-auto max-w-2xl gap-x-14 lg:flex lg:max-w-5xl lg:items-center lg:px-8 xl:px-0">
+                <div className="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
+                  <h1 className="text-pretty text-5xl font-semibold tracking-tight text-gray-900 dark:text-gray-100 sm:text-7xl">
+                    I'm Alan, a software engineer from Yorkshire.
+                  </h1>
+                  <p className="text-pretty mt-8 text-lg font-medium text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
+                    This is my site where I share my work, articles, thoughts on
+                    software development, technology, and life.
+                  </p>
+                  <div className="mt-10 flex items-center gap-x-6">
+                    <a
+                      href="/projects"
+                      className="shadow-xs rounded-md bg-teal-600 px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-teal-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
+                    >
+                      My work
+                    </a>
+                    <a
+                      href="/articles"
+                      className="text-sm/6 font-semibold text-gray-900"
+                    >
+                      Articles <span aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+                <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
+                  <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
+                    <div className="relative">
+                      <Image
+                        src={image3}
+                        alt="banner portfolio image"
+                        sizes="(min-width: 640px) 18rem, 11rem"
+                        className="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                      />
+                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                    </div>
+                  </div>
+                  <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
+                    <div className="relative">
+                      <Image
+                        src={image1}
+                        alt="banner portfolio image"
+                        sizes="(min-width: 640px) 18rem, 11rem"
+                        className="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                      />
+                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                    </div>
+                    <div className="relative">
+                      <Image
+                        src={image2}
+                        alt="banner portfolio image"
+                        sizes="(min-width: 640px) 18rem, 11rem"
+                        className="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                      />
+                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                    </div>
+                  </div>
+                  <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
+                    <div className="relative">
+                      <Image
+                        src={image5}
+                        alt="banner portfolio image"
+                        sizes="(min-width: 640px) 18rem, 11rem"
+                        className="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                      />
+                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                    </div>
+                    <div className="relative">
+                      <Image
+                        src={image4}
+                        alt="banner portfolio image"
+                        sizes="(min-width: 640px) 18rem, 11rem"
+                        className="aspect-2/3 w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
+                      />
+                      <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-6 lg:max-w-5xl mx-auto flex gap-6">
+                <SocialLink
+                  href="https://twitter.com/kimchi_digital"
+                  aria-label="Follow on Twitter"
+                  icon={TwitterIcon}
+                />
+                <SocialLink
+                  href="https://www.instagram.com/kimchi_digital"
+                  aria-label="Follow on Instagram"
+                  icon={InstagramIcon}
+                />
+                <SocialLink
+                  href="https://github.com/Oakyden"
+                  aria-label="Follow on GitHub"
+                  icon={GitHubIcon}
+                />
+                <SocialLink
+                  href="https://www.linkedin.com/in/alan-oakden-b46832111/"
+                  aria-label="Follow on LinkedIn"
+                  icon={LinkedInIcon}
+                />
+              </div>
+            </div>
+          </div>
         </div>
-      </Container>
-      <Photos />
+      </main>
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">

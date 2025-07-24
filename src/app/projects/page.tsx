@@ -18,7 +18,7 @@ const projects = [
   {
     name: 'Interactive Investor',
     description:
-      `Interactive Investor is a subscription based online investment service with £59 billion of assets under administration and over 400,000 customers. 
+      `Working within a large enterprise team consisting of multiple API, front end and mobile squads. Interactive Investor is a subscription based online investment service with £59 billion of assets under administration and over 400,000 customers. 
       "ii" were seeking a dev with experience in both the React ecosystem as well as Drupal. Although a rather niche combination, I met the requirements. 
       Originally a 3 month contract, it was extended several times over. I decided to leave the contract after a successful 16 months in order to help look after my first born child, Lilly, during the first weeks of her life.`,
     link: { href: '/articles/interactive-investor', label: 'ii article' },
@@ -106,7 +106,7 @@ export default function Projects() {
     <SimpleLayout
       title="Things I’ve made or collaborated on."
       intro="I've worked on mobile apps, CMS sites (in particular Drupal) as well as proprietary 
-      web app solutions (React, NextJS, Gatsby). Below are just some of the things i've led on or had a big input."
+      web app solutions (React, NextJS, Gatsby) within large enterprise structures. Below are just some of the things I've led on or had a big input."
     >
       <ul
         role="list"
